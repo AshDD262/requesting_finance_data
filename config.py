@@ -1,1 +1,3 @@
-MY_API_KEY = "a5f29619316da5450da1844dcd4af4787e82ba7bb7c4a3b0a367066b15d15fcf"
+MY_API_KEY = #add_an_API_key
+
+#note: figure out how to do a .gitignore so that this doesn't have to be like this
