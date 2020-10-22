@@ -16,6 +16,9 @@ import concurrent.futures
 import os
 from config import MY_API_KEY
 
+#this allows us to get the name of the user so that we can dynamically save to the computer's documents
+import getpass
+
 #design an 'Extractatron' object in which we will do the majority of our coding
 class Extractatron() :
     
@@ -320,8 +323,8 @@ indexed_soups = Extractosaur.request_filing_data()
 Extractosaur.parse_filing_documents(indexed_soups, restrictions = ['year_of_incorp=2020', 'investment_group=pooled_investment_fund, no other'])
 
 #finally save: on other computers will need to change the path!
-#path = "C:\\Users\\ASDAVY\\Documents\\"
+#path = f"C:\\Users\\{getpass.getuser()}\\Documents\\"
 #if os.path.exists(path) :
-#    Extractosaur.df.to_csv(path + "data_for_pageant_media_ashley_davy.csv")
+#    Extractosaur.df.to_csv(path + "data_file.csv")
 
 #print(Extractosaur.df)
